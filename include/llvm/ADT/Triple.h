@@ -88,7 +88,8 @@ public:
     shave,      // SHAVE: Movidius vector VLIW processors
     wasm32,     // WebAssembly with 32-bit pointers
     wasm64,     // WebAssembly with 64-bit pointers
-    LastArchType = wasm64
+    mcs51,       // MCS51: mcs51
+    LastArchType = mcs51
   };
   enum SubArchType {
     NoSubArch,

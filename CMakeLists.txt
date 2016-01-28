@@ -212,12 +212,14 @@ set(LLVM_ALL_TARGETS
   Hexagon
   Mips
   MSP430
+  MCS51
   NVPTX
   PowerPC
   Sparc
   SystemZ
   X86
   XCore
+  MCS51
   )
 
 # List of targets with JIT support:

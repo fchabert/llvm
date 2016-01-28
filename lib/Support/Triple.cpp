@@ -63,6 +63,7 @@ const char *Triple::getArchTypeName(ArchType Kind) {
   case shave:       return "shave";
   case wasm32:      return "wasm32";
   case wasm64:      return "wasm64";
+  case mcs51:      return "mcs51";
   }
 
   llvm_unreachable("Invalid ArchType!");
@@ -1093,6 +1094,7 @@ static unsigned getArchPointerBitWidth(llvm::Triple::ArchType Arch) {
 
   case llvm::Triple::avr:
   case llvm::Triple::msp430:
+  case llvm::Triple::mcs51:
     return 16;
 
   case llvm::Triple::arm:
@@ -1163,6 +1165,7 @@ Triple Triple::get32BitArchVariant() const {
   case Triple::bpfel:
   case Triple::bpfeb:
   case Triple::msp430:
+  case Triple::mcs51:
   case Triple::systemz:
   case Triple::ppc64le:
     T.setArch(UnknownArch);
@@ -1218,6 +1221,7 @@ Triple Triple::get64BitArchVariant() const {
   case Triple::hexagon:
   case Triple::kalimba:
   case Triple::msp430:
+  case Triple::mcs51:
   case Triple::r600:
   case Triple::tce:
   case Triple::xcore:
